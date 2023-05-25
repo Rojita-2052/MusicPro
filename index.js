@@ -17,7 +17,10 @@ let todosProductos =[]
 
 const valorTotal = document.querySelector('.total-pagar')
 
-const contarProducto = document.querySelector('.#contador-producto')
+const contarProductos = document.querySelector('#contador-productos')
+
+const carroEmpty = document.querySelector('.carro-empty')
+const carroTotal = document.querySelector('.carro-total')
 
 listaProducto.addEventListener('click', e => {
     if(e.target.classList.contains('btn-agregar-carro')){
@@ -49,10 +52,35 @@ listaProducto.addEventListener('click', e => {
     }
 })
 
-/**Función para mostrar en HTML */
-const showHTML = () => {
+filaProducto.addEventListener('click', e => {
+    if (e.target.classList.contains('icon-cerrar'))
+    {
+        const producto = e.target.parentElement;
+        const titulo = producto.querySelector('p').textContent;
 
-    /**Limpiar todos los productos */
+        todosProductos = todosProductos.filter(
+            producto => producto.titulo !== titulo
+        );
+
+        console.log(todosProductos)
+
+        showHTML();
+    }
+})
+
+//Función para mostrar en HTML
+const showHTML = () => {
+    if(!todosProductos.length){
+        carroEmpty.classList.remove('hidden');
+        filaProducto.classList.add('hidden');
+        carroTotal.classList.add('hidden');
+    }else{
+        carroEmpty.classList.add('hidden');
+        filaProducto.classList.remove('hidden');
+        carroTotal.classList.remove('hidden');
+    }
+
+    //Limpiar todos los productos
     filaProducto.innerHTML = '';
 
     let total = 0;
@@ -87,5 +115,5 @@ const showHTML = () => {
     })
 
     valorTotal.innerText = `$${total}`;
-    contarProducto.innerText = totalDeProducto;
+    contarProductos.innerText = totalDeProducto;
 };
