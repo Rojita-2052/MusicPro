@@ -5,11 +5,11 @@ require_once '../config.php';
 $valido['success']=array('success'=>false, 'mensaje'=>"");
 
 if($_POST){
-    $nombre=$_POST["nombre"];
-    $apellido=$_POST["apellido"];
-    $email=$_POST["email"];
-    $telefono=$_POST["telefono"];
-    $clave=md5($_POST["clave"]);
+    $nombre=$_POST['nombre'];
+    $apellido=$_POST['apellido'];
+    $email=$_POST['email'];
+    $telefono=$_POST['telefono'];
+    $clave=md5($_POST['clave']);
 
     $sql="SELECT * FROM usuario WHERE email ='$email'";
     $resultado=$conn->query($sql);
