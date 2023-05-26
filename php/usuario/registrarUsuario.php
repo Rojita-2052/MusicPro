@@ -26,7 +26,7 @@ if($_POST){
 
     }else{
         $valido['success']=false;
-        $valido['mensaje']="El correo eléctronico ya se encuentra registrado";
+        $valido['mensaje']="El email de contacto ya se encuentra registrado";
     }
 
 }else{

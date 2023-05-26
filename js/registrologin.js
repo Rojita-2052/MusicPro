@@ -14,7 +14,7 @@ const registrarUsuario= async()=>{
             icon: 'error',
             title: 'ERROR',
             text: '¡Completa todos los campos!',
-            footer: 'CRUD CONTACTOS'
+            footer: 'MusicPRO CONTACTOS'
           })
         return;
     }
@@ -24,7 +24,7 @@ const registrarUsuario= async()=>{
             icon: 'error',
             title: 'ERROR',
             text: '¡Registra un nombre válido!',
-            footer: 'CRUD CONTACTOS'
+            footer: 'MusicPRO CONTACTOS'
           })
         return;
     }
@@ -33,7 +33,7 @@ const registrarUsuario= async()=>{
             icon: 'error',
             title: 'ERROR',
             text: '¡Registra un apellido válido!',
-            footer: 'CRUD CONTACTOS'
+            footer: 'MusicPRO CONTACTOS'
           })
         return;
     }
@@ -42,7 +42,7 @@ const registrarUsuario= async()=>{
             icon: 'error',
             title: 'ERROR',
             text: '¡Registra un correo válido!',
-            footer: 'CRUD CONTACTOS'
+            footer: 'MusicPRO CONTACTOS'
           })
         return;
     }
@@ -51,7 +51,7 @@ const registrarUsuario= async()=>{
             icon: 'error',
             title: 'ERROR',
             text: '¡Registra un número celular válido!',
-            footer: 'CRUD CONTACTOS'
+            footer: 'MusicPRO CONTACTOS'
           })
         return;
     }
@@ -75,8 +75,8 @@ const registrarUsuario= async()=>{
         Swal.fire({
             icon: 'success',
             title: 'EXITO',
-            text: 'Respuesta'.respuesta,
-            footer: 'CRUD CONTACTOS'
+            text: resultado.mensaje,
+            footer: 'MusicPRO CONTACTOS'
           }) 
           //borra el formulario
           document.querySelector('#form-registro').reset();
@@ -87,8 +87,34 @@ const registrarUsuario= async()=>{
         Swal.fire({
             icon: 'error',
             title: 'ERROR',
-            text: 'Respuesta'.respuesta,
-            footer: 'CRUD CONTACTOS'
+            text: resultado.mensaje,
+            footer: 'MusicPRO CONTACTOS'
           })
     }
+}
+
+//login
+const loginUsuario = async()=>{
+  var email = document.querySelector('#email').value;
+  var clave = document.querySelector('#clave').value;
+
+  if(email.trim()===''||
+     clave.trim()===''){
+      Swal.fire({
+          icon: 'error',
+          title: 'ERROR',
+          text: '¡Completa todos los campos!',
+          footer: 'MusicPRO CONTACTOS'
+        })
+      return;
+  }
+  if(!validarEmail(email)){
+      Swal.fire({
+          icon: 'error',
+          title: 'ERROR',
+          text: '¡Registra un correo válido!',
+          footer: 'MusicPRO CONTACTOS'
+        })
+      return;
+  }
 }
