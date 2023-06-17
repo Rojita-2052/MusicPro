@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 body{
@@ -12,9 +13,29 @@ body{
     max-width: 1300px;
     font-family: 'Lato';
     color: #333;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-/*configuracion al icono principal*/
+/*configuracion de login*/
+.contenedor-login{
+    display: flex;
+    justify-content: start;
+    padding: 150px;
+
+}
+
+#form-inicio{
+    width: 315px;
+    height: 498px;
+    margin: auto;
+    border: azure;
+    box-sizing: border-box;
+}
+
+/*configuracion al icono el carro de compras*/
 .icon-carro{
     width: 40px;
     height: 40px;
@@ -24,6 +45,7 @@ body{
 .icon-carro:hover{
     cursor: pointer;
 }
+
 /*configuración a las imagenes*/
 img{
     max-width: 80%;
@@ -121,7 +143,7 @@ header{
     font-weight: 900;
 }
 
-/*clase para ocultar el contenido*/
+/*clase para ocultar el contenido del carro de compras*/
 .hidden-cart{
     display: none;
 }
@@ -141,7 +163,10 @@ header{
 }
 
 
-/*configuracion del main*/
+
+
+
+/*configuracion del carro de compras*/
 .contendedor-items{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -150,10 +175,11 @@ header{
 
 .items{
     border-radius: 10px;
+    background-color: #fff;
 }
 
 .items:hover{
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.100);
 }
 
 .items img{
@@ -201,23 +227,9 @@ header{
 .hidden{
     display: none;
 }
-/*configuracion de login*/
-.contenedor-login{
-    display: flex;
-    justify-content: center;
-    padding: 50px;
-}
 
-.contenedor-login img{
-    width: 120%;
-    height: 200px;
-    border-radius: 10px 10 px 0 0;
-}
 
-#form-inicio{
-    width: 300px;
-    margin: auto;
-}
+
 
 /*configuración de registro*/
 .contenedor-registro{
