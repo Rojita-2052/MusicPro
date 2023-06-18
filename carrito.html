@@ -9,24 +9,28 @@
     <title>Music PRO</title>
     <link rel="shortcut icon" href="img/logo-music-pro.jpg" type="image/x-icon">
     <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        h1{
+            color: aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        span{
+            color: aliceblue;
+        }
+        p{
+            color: aliceblue;
+        }
+        h3{
+            color: aliceblue;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Catalogo de instrumentos musicales</h1>
+        <h1 FONT color=#fff >Catalogo de instrumentos musicales</h1>
         <div class="contenedor-iconos">
             <div class="contenedor-carro-icon">
-                <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                fill="none"
-                viewBox="0 0 24 24" 
-                stroke-width="1.5"
-                stroke="currentColor" 
-                class="icon-carro">
-                <path 
-                    fill-rule="evenodd" 
-                    d="M6 5v1H4.667a1.75 1.75 0 00-1.743 1.598l-.826 9.5A1.75 1.75 0 003.84 19H16.16a1.75 1.75 0 001.743-1.902l-.826-9.5A1.75 1.75 0 0015.333 6H14V5a4 4 0 00-8 0zm4-2.5A2.5 2.5 0 007.5 5v1h5V5A2.5 2.5 0 0010 2.5zM7.5 10a2.5 2.5 0 005 0V8.75a.75.75 0 011.5 0V10a4 4 0 01-8 0V8.75a.75.75 0 011.5 0V10z" clip-rule="evenodd" />
-              </svg>
-
+                <img src="img/cart.png" alt="">
              <div class="contador-producto">
                 <span id="contador-productos">0</span>
              </div>
@@ -36,9 +40,9 @@
                 <div class="fila-producto">
                     <div class="carro-producto">
                         <div class="info-carro-producto">
-                            <span class="cantidad-carro-productos">1</span>
-                            <p class="titulo-producto-carro">Batería</p>
-                            <span class="precio-carro-producto">$305990</span>
+                            <span class="cantidad-carro-productos"></span>
+                            <p class="titulo-producto-carro"></p>
+                            <span class="precio-carro-producto"></span>
                         </div>
                         <svg 
                             xmlns="http://www.w3.org/2000/svg" 
@@ -56,6 +60,9 @@
                 <div class="carro-total hidden">
                     <h3>Total</h3>
                     <span class="total-pagar">$305990</span>
+                </div>
+                <div class="btn-pagar">
+                    <input type="button" class="btn btn-success form-control" onclick="create()" value="Pagar">
                 </div>
                 <p class="carro-empty">El carrito esta vacío</p>
              </div>
@@ -132,5 +139,6 @@
         </div>
     </div>
     <script src="js/carrito.js"></script>
+    <script src="js/transbank.js"></script>
 </body>
 </html>
