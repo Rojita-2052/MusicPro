@@ -48,7 +48,7 @@ body{
 
 /*configuración a las imagenes*/
 img{
-    max-width: 80%;
+    max-width: 90%;
 }
 
 /*configuracion al header*/
@@ -63,7 +63,11 @@ header{
     width: 60px;
     height: 50px;
 }
-
+.contenedor-cerrar-icon{
+    position: fixed;
+    width: 60px;
+    height: 50px;
+}
 .contador-producto{
     position: absolute;
     top: 55%;
@@ -85,11 +89,14 @@ header{
     top: 50px;
     right: 0;
 
-    background-color: #11edde;
+    background-color: #c4f7f3;
     width: 400px;
     z-index: 1;
     box-shadow: 0 10px 20 px rgba(0, 0, 0, 0.20);
     border-radius: 10px;
+}
+.contenedor-carro-productos p{
+    color: #000;
 }
 
 .carro-producto{
@@ -138,8 +145,17 @@ header{
 .carro-total h3{
     font-size: 20px;
     font-weight: 700;
+    color: #000;
 }
-
+.carro-total span{
+    color: #000;
+}
+.info-carro-producto span{
+    color: #000;
+}
+.carro-producto p{
+    color: #000;
+}
 .total-pagar{
     font-size: 20px;
     font-weight: 900;
@@ -147,8 +163,8 @@ header{
 
 /*clase para ocultar el contenido del carro de compras*/
 .hidden-cart{
-    display: none;
-    background-color: rgb(0, 0, 0);
+    display:none;
+    background-color: rgb(240, 226, 226);
 }
 
 .icon-cerrar{
@@ -160,12 +176,6 @@ header{
     stroke: green;
 
 }
-
-.contenedor-iconos{
-    position: relative;
-}
-
-
 
 /*configuracion del carro de compras*/
 .contendedor-items{
@@ -185,7 +195,7 @@ header{
 
 .items img{
     width: 60%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
     border-radius: 10px 10 px 0 0;
     transition: all .5s;
@@ -204,6 +214,9 @@ header{
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+.info-producto p{
+    color: #000;
 }
 
 .price{
