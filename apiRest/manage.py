@@ -183,7 +183,10 @@ def header_request_transbank():
                # LLAVE QUE DEBE SER MODIFICADA PORQUE ES SOLO DEL AMBIENTE DE INTEGRACIÓN               
                "Tbk-Api-Key-Secret" : "579B532A7440BB0C9079DED94D31EA1615BACEB56610332264630D42D0A36B1C",
                # DEFINICION DE TIPO DE INFORMACIÓN ENVIADA
-               "Content-Type" : "application/json"
+               "Content-Type" : "application/json",
+               # DEFINICIÓN DE RECURSOS COMPARTIDOS ENTRE DISTINTOS SERVIDORES PARA CUALQUIER MÁQUINA
+               "Acces-Control-Allow-Origin": "*",              
+               "Referrer-policy": "origin-when-cross-origin"
                 }
     return headers
 
