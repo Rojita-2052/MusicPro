@@ -127,7 +127,7 @@ async function create(){
     const sessionId = "1233DSXXD"
     /* LEER MONTO A PAGAR */
     const monto = $("#txt-C").val();
-    const urlRetornoPago = "http://127.0.0.1:5501/carrito.html"
+    const urlRetornoPago = "http://127.0.0.1:5501/comprobante.html"
     const url = "http://127.0.0.1:8900/api/v1/transbank/transaccion/crear";
     const method = 'POST';
     /* LLAMADO A API REST CREACIÓN TRANSACCIÓN TRANSBANK */

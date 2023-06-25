@@ -4,8 +4,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: sans-serif;
+    box-sizing: border-box;
 }
 body{
     margin: 0 auto;
@@ -17,6 +17,14 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    justify-content: center;
+}
+/*configuracion al header*/
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 40px 0;
+    
 }
 
 /*configuracion de login*/
@@ -49,13 +57,6 @@ body{
 /*configuración a las imagenes*/
 img{
     max-width: 90%;
-}
-
-/*configuracion al header*/
-header{
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 0 40px 0;
 }
 
 .contenedor-iconos{
@@ -164,7 +165,6 @@ header{
 /*clase para ocultar el contenido del carro de compras*/
 .hidden-cart{
     display:none;
-    background-color: rgb(240, 226, 226);
 }
 
 .icon-cerrar{
@@ -180,13 +180,30 @@ header{
 /*configuracion del carro de compras*/
 .contendedor-items{
     display: grid;
+    justify-content: center;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
-
+.contenededor-comprobante{
+    padding: 300px;
+    display: flex;
+}
+.comprobante{
+    border-radius: 10px;
+    background-color:#4a2104;
+}
+.info-comprobante h3{
+    color: #fff;
+    font-style: oblique;
+    font-size: 4em;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+}
 .items{
     border-radius: 10px;
     background-color:#fff;
+    
 }
 
 .items:hover{
